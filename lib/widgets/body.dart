@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mailto/mailto.dart';
+import 'package:url_launcher/url_launcher.dart';
+import '../util/util.dart';
 import 'contact_button.dart';
 
 class Body extends StatelessWidget {
@@ -73,7 +76,9 @@ Body({super.key});
                                child: ContactButton(
                                 buttonText: 'Drop me a Line', 
                                 icon: Icon(Icons.mail_outline), 
-                                onPressed: (){},
+                                onPressed: (){
+                                   launch('https://mail.google.com');
+                                },
                                 ),
                              ),
                            )
@@ -144,4 +149,6 @@ Body({super.key});
       ],
     );
   }
+
+
 }

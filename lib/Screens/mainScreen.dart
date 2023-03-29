@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../util/util.dart';
 import '../widgets/Button_row.dart';
 import '../widgets/body.dart';
 import '../widgets/contact_button.dart';
@@ -36,7 +37,9 @@ class MainScreen extends StatelessWidget {
           ContactButton(
             buttonText: 'Contact Me',
             icon: Icon(Icons.send_sharp),
-            onPressed: () {},
+            onPressed: () {
+              launchMailto();
+            },
           )
         ],
       ),
