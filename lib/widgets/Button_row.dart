@@ -26,7 +26,7 @@ class ButtonRow extends StatelessWidget {
               TextButton(onPressed: (){
                  launch('https://twitter.com');
               }, child:Image.asset('assets/twitter.png',
-              width: 15,height: 15,))
+              width: 15,height: 15.0,))
 
             ],
           ),
