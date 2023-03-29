@@ -6,7 +6,7 @@ launchMailto() async {
     to: ['to@example.com'],
     cc: ['cc1@example.com', 'cc2@example.com'],
     subject: 'mailto example subject',
-    body: 'mailto example body',
+    body: 'mailto example ',
   );
   // Convert the Mailto instance into a string.
   // Use either Dart's string interpolation
