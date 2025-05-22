@@ -62,7 +62,7 @@ Body({super.key});
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Text('I\'m Malavika. \nA Software Developer \nand Flutter Dev',
+                            const Text('I\'m Malavika. \nA Software Developer \n and Flutter Dev',
                             style: TextStyle(
                               fontSize: 40.5,
                               color:Colors.black,
