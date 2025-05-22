@@ -47,7 +47,7 @@ Body({super.key});
         Expanded(
             flex: 1,
             child: Container(
-              color:Color.fromARGB(255, 255, 255, 255),
+              color:const Color.fromARGB(255, 255, 255, 255),
               child: Column(
                 children: [
                   Expanded(
@@ -62,7 +62,7 @@ Body({super.key});
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('I\'m Malavika. \nA Software Developer \nand Flutter Dev',
+                            const Text('I\'m Malavika. \nA Software Developer \nand Flutter Dev',
                             style: TextStyle(
                               fontSize: 40.5,
                               color:Colors.black,
@@ -73,7 +73,7 @@ Body({super.key});
                                padding: const EdgeInsets.fromLTRB(0, 10, 130, 0),
                                child: ContactButton(
                                 buttonText: 'Drop me a Line', 
-                                icon: Icon(Icons.mail_outline), 
+                                icon: const Icon(Icons.mail_outline), 
                                 onPressed: (){
                                    launch('https://mail.google.com');
                                 },
@@ -95,11 +95,11 @@ Body({super.key});
          child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 100,
             ),
-            Padding(
-              padding: const EdgeInsets.all(18.0),
+            const Padding(
+              padding: EdgeInsets.all(18.0),
               child: Text(
                 'My Projects',
                 style: TextStyle(
@@ -120,7 +120,7 @@ Body({super.key});
                           child: Column(
                             children: [
                               ListTile(
-                                leading: Icon(Icons.work),
+                                leading: const Icon(Icons.work),
                                 title: Text(projectsList[index]['title']!),
                                 subtitle: Text(projectsList[index]['subtitle']!),
                               ),
@@ -129,7 +129,7 @@ Body({super.key});
                                 child:
                                     Image.network(projectsList[index]['image']!),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 30,
                               )
                             ],
