@@ -3,7 +3,6 @@ import 'package:url_launcher/url_launcher.dart';
 import 'contact_button.dart';
 
 class Body extends StatelessWidget {
-
   final projectsList = [
     {
       'title': 'Static Random Image',
@@ -29,15 +28,15 @@ class Body extends StatelessWidget {
       'title': 'Bengo',
       'subtitle': 'Flutter email app',
       'image': 'https://picsum.photos/id/1025/400/300'
-    },{
+    },
+    {
       'title': 'Been There',
       'subtitle': 'Save places you\'ve visited',
       'image': 'https://picsum.photos/id/3/400/300'
     },
-
   ];
-Body({super.key});
-   
+  Body({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -47,43 +46,45 @@ Body({super.key});
         Expanded(
             flex: 1,
             child: Container(
-              color:const Color.fromARGB(255, 255, 255, 255),
+              color: const Color.fromARGB(255, 255, 255, 255),
               child: Column(
                 children: [
                   Expanded(
                     child: Stack(
                       alignment: Alignment.centerLeft,
                       children: [
-                      Opacity(
-                        opacity:0.5,
-                      child: Image.asset('assets/girl.jpg')),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text('I\'m Malavika. \nA Software Developer \n and Flutter Dev',
-                            style: TextStyle(
-                              fontSize: 40.5,
-                              color:Colors.black,
-                            ),),
-                           Align(
-                            alignment: Alignment.center,
-                             child: Padding(
-                               padding: const EdgeInsets.fromLTRB(0, 10, 130, 0),
-                               child: ContactButton(
-                                buttonText: 'Drop me a Line', 
-                                icon: const Icon(Icons.mail_outline), 
-                                onPressed: (){
-                                   launch('https://mail.google.com');
-                                },
+                        Opacity(
+                            opacity: 0.5,
+                            child: Image.asset('assets/girl.jpg')),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text(
+                                'I\'m Malavika. \nA Software Developer \n and Flutter Dev',
+                                style: TextStyle(
+                                  fontSize: 40.5,
+                                  color: Colors.black,
                                 ),
-                             ),
-                           )
-                          ],
-                        ),
-                      )
-                        
+                              ),
+                              Align(
+                                alignment: Alignment.center,
+                                child: Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 10, 130, 0),
+                                  child: ContactButton(
+                                    buttonText: 'Drop me a Line',
+                                    icon: const Icon(Icons.mail_outline),
+                                    onPressed: () {
+                                      launch('https://mail.google.com');
+                                    },
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
                       ],
                     ),
                   )
@@ -91,8 +92,7 @@ Body({super.key});
               ),
             )),
         Expanded(
-           
-         child: Column(
+            child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(
@@ -122,12 +122,13 @@ Body({super.key});
                               ListTile(
                                 leading: const Icon(Icons.work),
                                 title: Text(projectsList[index]['title']!),
-                                subtitle: Text(projectsList[index]['subtitle']!),
+                                subtitle:
+                                    Text(projectsList[index]['subtitle']!),
                               ),
                               Container(
                                 alignment: Alignment.center,
-                                child:
-                                    Image.network(projectsList[index]['image']!),
+                                child: Image.network(
+                                    projectsList[index]['image']!),
                               ),
                               const SizedBox(
                                 height: 30,
@@ -142,11 +143,8 @@ Body({super.key});
               ),
             ),
           ],
-        )
-          )
+        ))
       ],
     );
   }
-
-
 }
